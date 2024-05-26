@@ -12,5 +12,5 @@
 ## Features:
 * **CRUD** Operations.
 * **Create - Read - Update - Delete - Search - Validate - Save Locally.**
-* **Using HTML, Sass, TypeScript, Bootstrap ** 
+* **Using HTML, Sass, TypeScript, Bootstrap** 
 * **Fully Responsive App**
