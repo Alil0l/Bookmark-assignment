@@ -1,0 +1,206 @@
+@font-face {
+  font-family: "Raleway-800";
+  src: url("../assets/fonts/Raleway-Black.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Raleway-700";
+  src: url("../assets/fonts/Poppins-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Raleway-600";
+  src: url("../assets/fonts/Poppins-Medium.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Raleway-400";
+  src: url("../assets/fonts/Poppins-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins-700";
+  src: url("../assets/fonts/Poppins-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Poppins-400";
+  src: url("../assets/fonts/Poppins-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins-300";
+  src: url("../assets/fonts/Poppins-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Poppins-200";
+  src: url("../assets/fonts/Poppins-ExtraLight.ttf");
+  font-weight: 200;
+}
+.h-100vh {
+  height: 100dvh;
+}
+
+.hidden {
+  display: none;
+}
+
+* {
+  font-family: "Poppins-400";
+  letter-spacing: 1px;
+}
+
+body {
+  background-color: #0bc18d;
+}
+
+#addToList {
+  background-color: #873208;
+  color: white;
+}
+
+.header {
+  margin: auto;
+  font-family: var(--fa-style-family, "Font Awesome 6 Free");
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0bc18d;
+  width: 120%;
+  height: 2px;
+  z-index: -1;
+  transition: all 0.7s;
+}
+.header:hover::before {
+  height: 2rem;
+}
+
+.label {
+  margin: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+  color: #873208;
+}
+.label::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0%;
+  background-color: hsla(20, 89%, 28%, 0.2);
+  width: 85%;
+  height: 2px;
+  z-index: -1;
+  transition: all 0.7s;
+}
+.label:hover::before {
+  height: 1rem;
+}
+
+.bg-blue1 {
+  background-color: hsla(234, 75%, 30%, 0.1);
+  border: 1px solid hsla(234, 75%, 30%, 0.6);
+}
+
+.elev {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  min-width: 400px;
+  background-color: #ffffff;
+}
+
+.search {
+  width: 25%;
+  margin-bottom: 5px;
+  transition: all 1s;
+}
+.search:focus {
+  width: 100%;
+}
+
+input[type=checkbox i] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+}
+input[type=checkbox i]::before {
+  content: "";
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 1rem;
+  background-color: #dee3ed;
+  border-radius: 999px;
+  border: 1px solid #dee3ed;
+  transition: all 0.3s;
+}
+input[type=checkbox i]::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  z-index: 2;
+  width: 0.75rem;
+  height: 0.75rem;
+  transform: translateY(-50%);
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+input[type=checkbox i]:checked::before {
+  background-color: #873208;
+}
+input[type=checkbox i]:checked::after {
+  background-color: white;
+  left: 50%;
+}
+
+.tableHead {
+  font-family: var(--fa-style-family, "Font Awesome 6 Free");
+  font-style: normal;
+  border-bottom: 2px #0d6efd;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+
+.table .tableBody button.edit {
+  color: white;
+  background-color: #0bc18d;
+}
+.table .tableBody button.edit:hover, .table .tableBody button.edit:active {
+  color: white;
+  background-color: #078e68;
+}
+
+.table .tableBody button.delete {
+  color: white;
+  background-color: #fb0026;
+}
+.table .tableBody button.delete:hover, .table .tableBody button.delete:active {
+  color: white;
+  background-color: #bc001c;
+}
+
+div.hint-modal {
+  padding-top: 0;
+}
+div.hint-modal h1 {
+  font-family: "Roboto", system-ui;
+  font-size: 1.5rem;
+}
+div.hint-modal p {
+  font-family: "Roboto", system-ui;
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}/*# sourceMappingURL=main.css.map */

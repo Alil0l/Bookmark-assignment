@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SiteMarker</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/bookmark.png"
+      type="image/x-icon"
+    />
+    <!-- Link Boostrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script defer src="./js/bootstrap.bundle.min.js"></script>
+    <!-- Link FontAwosome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Link Main stylesheet -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script defer src="./js/script.js"></script>
+  </head>
+  <body>
+    <main>
+      <div
+        class="container d-flex my-5 py-2 flex-column justify-content-center align-items-start align-items-md-center"
+      >
+        <div class="elev rounded-2 w-75 px-5 py-5">
+          <h1 class="my-3 mb-5 header">Bookmarker</h1>
+          <div class="row w-100">
+            <div class="col-12 d-flex flex-column justify-content-center">
+              <div class="comp mb-3">
+                <label class="mb-2 label" for="siteName">
+                  <i class="fa-solid fa-book-bookmark pe-1"></i>
+                  Site Name:</label
+                >
+                <input
+                  on
+                  type="text"
+                  id="siteName"
+                  placeholder="Website Name"
+                  class="form-control bg-blue1"
+                />
+              </div>
+              <div class="comp mb-3">
+                <label class="mb-2 label" for="siteAddress">
+                  <i class="fa-solid fa-globe pe-1"></i> Site Address:</label
+                >
+                <input
+                  type="text"
+                  id="siteAddress"
+                  placeholder="Website Link"
+                  class="form-control bg-blue1"
+                />
+              </div>
+              <div class="mb-3 d-flex align-items-center gap-2">
+                <input class="" type="checkbox" id="switchBox" />
+                <label class="form-check-label fs-6" for="switchBox"
+                  >Keep Text?</label
+                >
+              </div>
+              <button class="btn mb-3" id="addToList">Add to List</button>
+            </div>
+          </div>
+        </div>
+        <input
+          class="form-control search align-self-start mt-5"
+          type="text"
+          name=""
+          id="search"
+          placeholder="🔍 Search a Website"
+        />
+        <div class="elev rounded-2 w-100">
+          <div class="row">
+            <div class="col-12">
+              <table
+                class="table overflow-hidden rounded-2 mb-0 text-center table-bordered table-hover table-striped"
+              >
+                <thead class="tableHead">
+                  <th>No.</th>
+                  <th>Title</th>
+                  <th>Address</th>
+                  <th>Modify</th>
+                </thead>
+                <tbody class="tableBody align-middle"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="btn btn-primary hidden click"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      ></button>
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body hint-modal">
+              <h1>
+                Site Name or Url is not valid, Please follow the rules below :
+              </h1>
+              <p>
+                <i class="fa-regular fa-circle-right px-2"></i>Site name must
+                contain at least 3 characters
+              </p>
+              <p>
+                <i class="fa-regular fa-circle-right px-2"></i>Site URL must be
+                a valid one
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

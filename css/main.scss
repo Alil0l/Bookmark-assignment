@@ -1,0 +1,193 @@
+// No need for global rules bcs bootstrap adds it.
+$bs-main-color: #0d6efd;
+$bs-sec-color: #cde1f8;
+// Mixins
+// Adding local fonts
+@mixin font($font-family, $font-files) {
+  @each $font-file, $font-weight in $font-files {
+    @font-face {
+      font-family: "#{$font-family}-#{$font-weight}";
+      src: url("#{$font-file}.ttf");
+      font-weight: $font-weight;
+    }
+  }
+}
+$Poppins-font-files: (
+  ("../assets/fonts/Poppins-Bold", 700),
+  ("../assets/fonts/Poppins-Regular", 400),
+  ("../assets/fonts/Poppins-Light", 300),
+  ("../assets/fonts/Poppins-ExtraLight", 200)
+);
+$Raleway-font-files: (
+  ("../assets/fonts/Raleway-Black", 800),
+  ("../assets/fonts/Poppins-Bold", 700),
+  ("../assets/fonts/Poppins-Medium", 600),
+  ("../assets/fonts/Poppins-Regular", 400)
+);
+@include font("Raleway", $Raleway-font-files);
+@include font("Poppins", $Poppins-font-files);
+// Global classes
+.h-100vh {
+  height: 100dvh;
+}
+.hidden {
+  display: none;
+}
+* {
+  font-family: "Poppins-400";
+  letter-spacing: 1px;
+}
+body {
+  background-color: #0bc18d;
+}
+
+// End of  mixins and classes
+
+//  Start of the main stylesheet
+#addToList {
+  background-color: #873208;
+  color: white;
+}
+.header {
+  margin: auto;
+  font-family: var(--fa-style-family, "Font Awesome 6 Free");
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0bc18d;
+    width: 120%;
+    height: 2px;
+    z-index: -1;
+    transition: all 0.7s;
+  }
+  &:hover {
+    &::before {
+      height: 2rem;
+    }
+  }
+}
+.label {
+  margin: auto;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+  color: #873208;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+    background-color: hsl(20, 89%, 28%, 0.2);
+    width: 85%;
+    height: 2px;
+    z-index: -1;
+    transition: all 0.7s;
+  }
+  &:hover {
+    &::before {
+      height: 1rem;
+    }
+  }
+}
+.bg-blue1 {
+  background-color: hsl(234, 75%, 30%, 0.1);
+  border: 1px solid hsl(234, 75%, 30%, 0.6);
+}
+.elev {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  min-width: 400px;
+  background-color: #ffffff;
+}
+.search {
+  width: 25%;
+  margin-bottom: 5px;
+  transition: all 1s;
+  &:focus {
+    width: 100%;
+  }
+}
+
+input[type="checkbox" i] {
+  appearance: none;
+  position: relative;
+  &::before {
+    content: "";
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 1rem;
+    background-color: #dee3ed;
+    border-radius: 999px;
+    border: 1px solid #dee3ed;
+    transition: all 0.3s;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    z-index: 2;
+    width: 0.75rem;
+    height: 0.75rem;
+    transform: translateY(-50%);
+    background-color: white;
+    border-radius: 50%;
+    transition: all 0.3s;
+  }
+  &:checked {
+    &::before {
+      background-color: #873208;
+    }
+    &::after {
+      background-color: white;
+      left: 50%;
+    }
+  }
+}
+
+.tableHead {
+  font-family: var(--fa-style-family, "Font Awesome 6 Free");
+  font-style: normal;
+  border-bottom: 2px #0d6efd;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+
+.table .tableBody button.edit {
+  color: white;
+  background-color: #0bc18d;
+  &:hover,
+  &:active {
+    color: white;
+    background-color: #078e68;
+  }
+}
+.table .tableBody button.delete {
+  color: white;
+  background-color: #fb0026;
+  &:hover,
+  &:active {
+    color: white;
+    background-color: #bc001c;
+  }
+}
+
+div.hint-modal {
+  padding-top: 0;
+  h1 {
+    font-family: "Roboto", system-ui;
+    font-size: 1.5rem;
+  }
+  p {
+    font-family: "Roboto", system-ui;
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+}
